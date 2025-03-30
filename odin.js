@@ -26,7 +26,6 @@ function getHumanChoice(){
   let input = prompt('Please choose : rock , paper or scissors').toLocaleLowerCase().trim();
   if (input !== 'rock' && input !== 'paper' && input !== 'scissors') {
    alert('Incorrect value! Please choose either "rock", "paper", or "scissors".');
-   let input = prompt('Please choose : rock , paper or scissors').toLocaleLowerCase();
 } else {
     console.log(`You choose: ${input}`);
 }
@@ -71,17 +70,18 @@ function playGame(){
     console.log(`human score: ${humanScore}, computer score: ${computercScore}`)
     
     console.log('......................................');
-    
-    
-    }
-    
-   
-  
-
-  alert('you finished the Game');
-  
-  
+     
 }
+if(humanScore > computercScore ){
+  alert("🫡 Bravo you beat the computer");
+}
+else if(humanScore < computercScore){
+  alert("😭Loser! Computer beats you");
+ }
+ else {
+  alert("you are equal");
+ }
+ }
 playGame();
 
 
